@@ -40,7 +40,7 @@ let ogr2dersnotu1=60;
 let ogr2dersnotu2=30;
 let ogr2dersnotu3=10; 
 let ogr2dersnotuort= (ogr2dersnotu1 + ogr2dersnotu2 + ogr2dersnotu3) / 3;
-console.log(parseInt(ogr2dersnotuort));
+console.log(parseInt(ogr2dersnotuort));//burasi kusuratli olsun. 33.33
 let ogr2dersdurum = ogr2dersnotuort > gecmeNotu;
 console.log(ogr2dersdurum);
 // console.log(suankiYil - ogryas2);

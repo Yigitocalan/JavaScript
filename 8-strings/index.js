@@ -8,4 +8,4 @@ const meslek='full stack developer';
 //!Backtick
 
 const bio=`benim adim ${ad} soyadim ${soyad} yasim ${yas} sehir ${sehir} meslegim ${meslek}`;
-console.log(bio);
+console.log(bio);//+ ile kullanmamamizinb sebebi ne?
