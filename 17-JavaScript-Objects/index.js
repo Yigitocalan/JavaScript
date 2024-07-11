@@ -1,52 +1,48 @@
-// let costomers1=["emin",["monster" , "dell","casper",[10,20,30]]];
-
-
-// console.log(`urun: ${costomers1[1][0]} fiyati: ${costomers1[1][3][0]}`);
-
-
-let costomer1={
-    "ad": "yigit",
-    "soyad": "ocalan",
-    "sehir": "istanbul",
-    "yas": "22",
-    "products": [
-        "laptop","car", "phone"
-    ]
-}
-let costomer2={
-    "ad": "nur",
-    "soyad": "kalan",
-    "sehir": "istanbul",
-    "yas": "25",
+let costumer1={
+    "isim":"yigit",
+    "soyisim":"ocalan",
+    "yas":22,
+    "sehir":"istanbul",
     "products":{
-        "phone":"iphone6",
-        "price":20
+        "phone":"apple",
+        "price":98.00
     }
 }
-let costomer3={
-    "ad": "ahmet",
-    "soyad": "oglubas",
-    "sehir": "istanbul",
-    "yas": "26",
+let costumer2={
+    "isim":"nur",
+    "soyisim":"ocalan",
+    "yas":22,
+    "sehir":"istanbul",
 }
-
-let costomerss=[
-    costomer1,
-    costomer2,
-    costomer3
-]
+let costumer3={
+    "isim":"idil",
+    "soyisim":"ocalan",
+    "yas":22,
+    "sehir":"istanbul",
+}
+let customers={
+    costumer1,
+    costumer2,
+    costumer3,
+}
 let urunler=[
     {
-        "urunadi":"huawei",
-        "fiyat":10
+        "id":"1",
+        "urun":"apple",
+        "fiyati":25,
     },
     {
-        "urunadi":"apple",
-        "fiyat":20
+        "id":"2",
+        "urun":"huawei",
+        "fiyati":25,
     },
     {
-        "urunadi":"vestel",
-        "fiyat":30
-    },
+        "id":"3",
+        "urun":"xioami",
+        "fiyati":25,
+    }
 ]
-console.log(urunler[1].urunadi);
+
+console.log(urunler[0].urun);
+//objelerde digerlerine bak
+//! object ve dizilerin arasindaki fark:Dizi de loga tek tek oldugu konumun yerini yazarken object te ise loga atadigimiz karakterden sonra . koyup yazdirmaktan ibaret

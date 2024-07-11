@@ -1,49 +1,24 @@
-/*1-mert demir
- dogum tarihi:2001
-bilgisayar notlari:100,90,10
+ let suankiYil=new Date().getFullYear();
+ let gecmeNotu=45;
 
-
- 2-eylul demir
-dogum tarihi:2002
- bilgisayar notlari:60,30,50
-
-
-gecer not:45
-
-program sartlari:
-1-ogrencinin yaslarini hesaplayiniz TAMAMDIR
-2-ogrencinin ders ortlamasini hesaplayiniz
-3-ogrencilerin dersten kalip kalmadigini heaplayin
-
-
-
-*/
-
-let suankiYil=new Date().getFullYear();
-let gecmeNotu=45;
-let ogr1='mert demir';
-let ogryas1=2001;
-// console.log(suankiYil - ogryas1);
+let ogr1="yigit ocalan";
+let ogrdgmyili1=2001;
+let ogryas1=suankiYil - ogrdgmyili1;
 let ogr1dersnotu1=100;
 let ogr1dersnotu2=90;
-let ogr1dersnotu3=10; 
-let ogr1dersnotuort= (ogr1dersnotu1 + ogr1dersnotu2 + ogr1dersnotu3) / 3;
-let ogr1dersdurum = ogr1dersnotuort > gecmeNotu;
-console.log(ogr1dersdurum);
-
-
-
-let ogr2='eylul demir';
-let ogryas2=2002;
-
+let ogr1dersnotu3=60;
+let ogr1dersort=(ogr1dersnotu1 + ogr1dersnotu2  + ogr1dersnotu3) /3;
+let ogrdurum1=ogr1dersort > gecmeNotu;
+let ogr2="aleyna ocalan";
+let ogrdgmyili2=2005;
+let ogryas2=suankiYil - ogrdgmyili2;
 let ogr2dersnotu1=60;
-let ogr2dersnotu2=30;
-let ogr2dersnotu3=10; 
-let ogr2dersnotuort= (ogr2dersnotu1 + ogr2dersnotu2 + ogr2dersnotu3) / 3;
-console.log(parseInt(ogr2dersnotuort));//burasi kusuratli olsun. 33.33
-let ogr2dersdurum = ogr2dersnotuort > gecmeNotu;
-console.log(ogr2dersdurum);
-// console.log(suankiYil - ogryas2);
+let ogr2dersnotu2=10;
+let ogr2dersnotu3=40;
+let ogr2dersort=(ogr2dersnotu1 + ogr2dersnotu2  + ogr2dersnotu3) /3;
+let ogrderssonucu=36.666666;
+let ogrdurum2=ogr2dersort > gecmeNotu;
 
-console.log("1. ogrencinin gecme durumu: ", ogr1dersdurum);
-console.log("2. ogrencinin gecme durumu: ", ogr2dersdurum);
+console.log("birinci ogrenci gecme notu: ", ogrdurum1);
+//sonucu number olmayan birseye parseint vs yazarak ondalikli sayidan cikartamazsin dikkat!!!!
+console.log("ikinci ogrenci gecme notu: " , parseInt(ogrderssonucu));

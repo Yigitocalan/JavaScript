@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom</title>
+</head>
+<body>
+    <!-- <h1 class="title" id="title">Javascript Dom</h1> -->
+
+
+    <h2>Ogrenci listesi</h2>
+    <ul class="list">
+        <li class="listItem">ali</li>
+        <li class="listItem">veli</li>
+        <li class="listItem">ahmet </li>
+        <li class="listItem">yigit</li>
+        <li class="listItem"s>emin</li>
+    </ul>
+    h2>Ogrenci listesi</h2>
+    <ul class="list2">
+        <li class="listItem">ali</li>
+        <li class="listItem">veli</li>
+        <li class="listItem">ahmet </li>
+        <li class="listItem">yigit</li>
+        <li class="listItem"s>emin</li>
+    </ul>
+
+    <!-- javascript Tekli seciciler -->
+    <!-- <h1 class="title">Javascript Dom</h1>
+    <h1 class="title" id="title">Javascript Dom</h1>
+    <h1 class="title">Javascript Dom</h1>
+    <h1 class="title">Javascript Dom</h1> -->
+    <script >
+       //const title=document.querySelector("h1")//queryselector tekli secicidir tek bir etiket secer. //classina gore seceriz
+       //const title2=document.getElementById("title")//id sine gore seceriz
+       //title.style.color="red"
+       //title2.style.color="blue"
+
+    //    document.querySelector("h1").style.color="white"
+    //    document.querySelector("h1").style.background="red"
+    //   document.querySelector("h1").style.width="250px"
+    //    document.querySelector("h1").style.height="250px"
+    //    const title = document.querySelector("h1");
+    //    title.innerText="dom"
+    //     title.innerHTML="<button >click</button>"
+    //     const list=document.querySelector("li")
+    //     document.querySelector("li").style.color="blue"
+    //     document.querySelector("li:last-child").style.color="blue"
+    //     document.querySelector("li:nth-child(3)").style.color="green"
+
+    //   javascript coklu seciciler
+
+    const listItem=document.getElementsByClassName("list");
+   for(let i=0;i<listItem.length;i++){
+    listItem[i].style.color="blue"
+
+   }
+
+
+
+    </script>
+</body>
+</html>

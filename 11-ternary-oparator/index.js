@@ -1,25 +1,17 @@
-// const username = "yigitocalan";
-// const password = "123456";
+//! if else normal kullanimi
+const username="yigit";
+const password="123456";//numberi string yapmamizin sebebi asagida karakter sayisini bulmamiz icin lentgh kullanicaz lentgh string metodudur bu yuzden numberda calismaz.
+if (password.length>6) {
+console.log("calisti.");
+    
+ }else{
+ console.log("calismadi.");
+}
 
-// password.length >= 6 ? console.log("calisti") : console.log("calismadi");
-// username.length> 11 ? console.log("calisti") : console.log("calismadi");
+//! ternary opertoru
+const username1="yigit";
+const password1="123456";
+password1.length > 5 ? console.log("calisti.") : console.log("calismadi.");
+username1.length > 4 ? console.log("calisti.") : console.log("calismadi.");
 
-// bu kullanim sayesinde if ve else kullanimina gerek kalmiyor 
-
-
-// tekrar
-
-const username = "yigit ocalan";
-const password = "12345678910";
-
-// if (username == "yigit ocalann"){
-//     if(password =="12345678910"){
-//         console.log("kullanici  adi ve sifre dogru giris yapildi");
-//     }
-// }
-// else {
-//     console.log("kullanici adi veya sifre  yanlis");
-// }
-
-password==="12345678910" ? console.log("sifre dogru") : console.log("sifre yanlis");
-username==="yigit ocalannb" ? console.log("kullanici adi dogru") : console.log("kullanici adi yanlis");
+//soru isareti if yerine kullanilir yani meali password 6 dan buyukse log calisti desin 
