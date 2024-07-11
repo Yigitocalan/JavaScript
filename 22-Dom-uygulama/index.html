@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+<body>
+    <h1 class="text-5xl text-center my-20">To do List</h1>
+    
+    <div class="container mx-auto w-1/2">
+        <form id="todo-form">
+            <div class="border flex">
+                <input type="text" placeholder="buraya birseyler yaz..." class="w-full p-3 relative z-90" id="todo-input" />
+                <button type="submit" class="border-l px-6 p-4 bg-green-500 text-white" id="add-todo">ekle</button>
+            </div>
+        </form>
+
+        <div class="flex justify-end my-5">
+            <button class="bg-red-500 text-white border-l px-3 p-4" id="clear-todos">Temizle</button>
+        </div>
+
+        <ul class="border p-6 flex flex-col gap-y-4" id="todos">
+        </ul>
+    </div>
+    
+    <script>
+        const textInputDom = document.getElementById("todo-input");
+        const btnaddTodoDom = document.getElementById("add-todo");
+        const todosDom = document.getElementById("todos");
+        const clearTodosDom = document.getElementById("clear-todos");
+        const form = document.getElementById("todo-form");
+
+        let todos = [];
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const textInputValue = textInputDom.value.trim();
+            if (textInputValue !== "") {
+                todos.unshift({ id: todos.length + 1, todoTitle: textInputValue });
+                textInputDom.value = "";
+                displayTodos();
+            }
+        });
+
+        clearTodosDom.addEventListener("click", function() {
+            todos = [];
+            displayTodos();
+        });
+
+        function displayTodos() {
+            let result = "";
+
+            if (todos.length === 0) {
+                todosDom.innerHTML = "liste bos";
+            } else {
+                todos.forEach((item) => {
+                    result += `<li class="flex justify-between border px-4 py-3 items-center">
+                        <span>${item.todoTitle}</span>
+                        <button class="text-red-500" onclick="deleteTodo(${item.id})">sil</button>
+                    </li>`;
+                });
+                todosDom.innerHTML = result;
+            }
+        }
+
+        function deleteTodo(id) {
+            todos = todos.filter(item => item.id !== id);
+            displayTodos();
+        }
+
+        displayTodos();
+    </script>
+</body>
+</html>

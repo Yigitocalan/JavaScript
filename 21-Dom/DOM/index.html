@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Dom</title>
+</head>
+<body>
+    <h1 class="title">js dom</h1>
+    <h2> liste 1 </h2>
+        <ul class="list1">
+            <li class="list-item">ali</li>
+            <li class="list-item">veli</li>
+            <li class="list-item">ahmet</li>
+            <li class="list-item">yigit</li>
+            <li class="list-item">berk</li>
+        </ul>
+        <h2> liste 2</h2>
+        <ul class="list2">
+            <li class="list-item">ali</li>
+            <li class="list-item">veli</li>
+            <li class="list-item">ahmet</li>
+            <li class="list-item">yigit</li>
+            <li class="list-item">berk</li>
+        </ul>
+    
+    <script >
+        //! JAVASCRIPT TEKLI SECICILER
+
+        // const title=document.querySelector(".title");
+        // title.style.color="red";
+        document.querySelector("h1").style.color="white";
+        document.querySelector("h1").style.background="red";
+        document.querySelector("h1").style.width="250px";
+        document.querySelector("h1").style.height="100px";
+        const title=document.querySelector("h1");
+        title.innerText="yigit ocalan";
+        title.innerHTML="<button>HADI BASS</button>";
+        const list=document.querySelector("ul");
+        document.querySelector("li").style.color="red";
+        document.querySelector("li:last-child").style.color="blue";
+        document.querySelector("li:nth-child(2)").style.color="blue";
+        document.querySelector("li:nth-child(3)").style.color="green";
+        //! JAVASCRIPT COKLU SECICILER
+        // const listItem=document.getElementsByClassName("list-item");
+       const listItem =document.querySelectorAll(".list1 li");
+
+         for(let i = 0; i<listItem.length; i++) {
+        //     console.log(listItem[i]);
+        // 
+        listItem[i].style.color="green"
+        }
+
+        // for( let list of listItem){
+        //     list.style.color="blue";
+        // }
+    </script>
+</body>
+</html>
